@@ -1,35 +1,172 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Prelaunch Signup" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Prelaunch Signup" %>">
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
-  </head>
-  <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Rails Prelaunch Signup" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Prelaunch Signup" %>">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+
+<!-- activate scrollspy -->
+
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="icon-reorder"></i>
+        </button>
+        <a class="navbar-brand" href="#">I Saw Who</a> 
+      </div>
+      <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
+          <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Features</a></li>
+    
+          <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
+          <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
+		  <li><a data-toggle="modal" href="#request-invite" class="scroll brand-2 raife">Plans</a></li>
+		   <li><a title="Newsletter!" href="#opt-in" class="scroll brand-2">Subscribe</a></li>
+		   
+      
+        </ul>
+      </div>
+    </div><!-- /.navbar-container -->
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page color-1">
+    <div class="inner-page">
+      <h2 class="page-headline large">Simple Practice Management for Physiotherapists.</h2>
     </div>
-    <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
-  </body>
+    <div class="row inner-page">
+      <div class="col-md-8 col-md-push-4 lazy-container">
+        <img class="lazy" alt="Looks great on every device" src="../assets/pixel.png" data-original="../assets/laptop.png" />
+      </div>
+      <div class="col-md-4 col-md-pull-8">
+        <ul class="big-list">
+	        <li><i class="icon-user"></i>Client details</li>
+	        <li><i class="icon-calendar"></i>Consultations</li>
+	        <li><i class="icon-dollar"></i>Payment history</li>
+	        <li><i class="icon-tablet"></i>Access anywhere</li>
+	        <li><i class="icon-cloud"></i>No installation</li>
+	        <li><i class="icon-lock"></i>Secure</li>
+        </ul>
+        <br />
+        <a href="#features" title="Check out more freatures!" class="scroll btn btn-primary btn-centered"><i class="icon-caret-down"></i> Learn more</a>
+      </div>
+    </div>
+  </div> <!-- /#home -->
+
+  <!-- Sign up -->
+  <div class="sign-up color-2 visible-lg">
+    <div class="row inner-page">
+      <div class="col-md-12">
+        <h2 class="pull-left">Maximize your billable client time & cut administration overhead.</h2>
+        <a href="#call-to-action" class="scroll btn btn-warning pull-right" title="Check out more freatures!"><i class="icon-caret-down"></i>Tell me more</a>
+      </div>
+    </div>
+  </div> <!-- /.sign-up -->
+
+  <!-- Feature page-->
+  <div id="features" class="page color-4">
+    <div class="inner-page">
+        <h2 class="page-headline">Why should you choose <strong>ISawWho</strong></h2>
+    </div>
+
+    <div class="inner-page row">
+        <ul class="features list-inline">
+  	      <li>
+        
+  	        <h3><i class="icon-smile"></i> Smart business</h3>
+  	        <p><strong>ISawWho</strong> is web based "software as a service".  This means you have no upfront capital costs, nothing to install, no servers to maintain and no IT skills required. </p><br><p>For a small monthly fee (likely to be fully tax deductable) <strong>ISawWho</strong> feels like having an assistant. It will pay for itself over and over again. We offer a 30 day free trial and there is no contract. <strong>It's completely risk free!</strong> 
+			</p>
+  	      </li>
+          <li>
+              <h3><i class="icon-time"></i> More client time</h3> 
+              <p> <strong>ISawWho</strong> is a "lean mean" business tool that streamlines key administration tasks so you can focus on looking after your clients. <strong>ISawWho</strong> enables you to easily lookup and record key information on the fly from any web enabled device.</p><br><p>
+  				Our continued success is entirely dependent on your continued success. So we are 
+  				 constantly taking feedback from our customers to improve <strong>ISawWho</strong>.</p>
+            </li>
+        <li>
+        <h3><i class="icon-lock"></i> Secure data </h3>
+        <p>Most of us dont worry about data security until its too late. Very few people diligiently backup their data every day or  even every week. </p><br><p>With <strong>ISawWho</strong> your data is backed up daily. The only people that access your business data is you and your authorised staff. We never see or keep your credit card details, these are encrypted and stored by a PCI compliant Payment Gateway.        </p>
+      </li>
+	
+          </ul>
+    </div>
+
+
+
+
+
+  </div> <!-- /#features -->
+  
+  <!-- Assets page -->
+
+ 
+  <!-- About page -->
+  <div id="about" class="page color-4">
+    <div class="inner-page">
+   
+    </div>
+    <div class="row inner-page">
+      <div class="col-md-6  lazy-container">
+        <img class="figurette lazy" src="../assets/pixel.png" data-original="../assets/green-office.png" alt="Our workspace" />
+      </div>
+      <div class="col-md-6">
+        <h3>Who is behind ISawWho?</h3>
+     <p class="lead">Hardware by Amazon, software by Swashfly.</p>
+        <p>Swashfly is a software company based in Melbourne, Australia. We specialise in delivering hosted practice management solutions. The software is hosted and managed on physical infrastructure in Amazon's secure data centers. </p>
+      </div>
+    </div>
+
+
+  </div> <!-- /#about -->
+
+  <!-- put modal here -->
+  <div class="span12">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
+    <!-- before here -->
+  <!-- Contact page -->
+  <div id="contact" class="page color-3">
+    <div class="inner-page">
+      <h2 class="page-headline">We would love to hear from you...</h2>
+    </div>
+    <div class="row inner-page contact">
+      <div class="col-md-6">
+        <h3>Any questions or feedback?</h3>
+        <form id="contact-form">
+          <textarea rows="6" class="form-control" placeholder="Your comments or questions"></textarea>
+          <input type="text" class="form-control" placeholder="your@e-mail.com">
+          <input type="text" class="form-control" placeholder="Name">
+          <button class="btn btn-primary btn-centered">Contact us</button>
+        </form>
+      </div>
+    
+    </div>
+  </div> <!-- /#contact -->
+
+  <!-- The footer, social media icons, and copyright -->
+  <footer class="page color-5">
+    <div class="inner-page row">
+      <div class="col-md-6 social">
+        <a href="#contact"><i class="icon-twitter"></i></a>
+        <a href="#contact"><i class="icon-github-sign"></i></a> 
+        <a href="#contact"><i class="icon-facebook-sign"></i></a>
+        <a href="#contact"><i class="icon-google-plus-sign"></i></a>
+      </div>
+      <div class="col-md-6 text-right copyright">
+        &copy; 2013 <a href="http://swashfly.com" title="twitter bootstrap themes">swashfly.com</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="icon-caret-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>

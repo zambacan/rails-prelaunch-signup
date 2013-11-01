@@ -9,12 +9,24 @@
  *
  */
 
-
+.features li {
+  display:inline-block;
+  vertical-align:top;
+}
+.raife {
+ background: #FF9900;
+}
 /* -------------------------------------------------- */
 /* Pages */
 /* -------------------------------------------------- */
 /* Colors. Just add appropriate class
  to your new page.*/
+
+.btn-warning {
+    background: #FF9900;
+    color: #ffffff;
+}
+
 .color-1 {
   background: #4baad3;
   color: #ffffff;
