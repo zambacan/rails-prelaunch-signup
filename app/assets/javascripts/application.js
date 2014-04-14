@@ -22,20 +22,22 @@ $('document').ready(function() {
   }
 
   // use AJAX to submit the "request invitation" form
-  $('#invitation_button').on('click', function() {
-    var email = $('form #user_email').val();
-    var dataString = 'user[email]='+ email;
-    $.ajax({
-      type: "POST",
-      url: "/users",
-      data: dataString,
-      success: function(data) {
-        $('#request-invite').html(data);
-        loadSocial();
-      }
-    });
-    return false;
-  });
+	$('#invitation_button').on('click', function() {
+		var email      = $('form #user_email').val();
+		var dataString = 'user[email]='+ email;
+		$.ajax({
+			type: "POST",
+			url: "/users",
+			data: dataString,
+			success: function(data) {
+				$('#request-invite').html(data);
+				// $('body').removeClass('modal-open');
+				$('.modal-backdrop').remove();
+				loadSocial();
+			}
+		});
+		return false;
+	});
 
 })
 

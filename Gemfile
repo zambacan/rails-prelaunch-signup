@@ -15,7 +15,7 @@ group :assets do
   gem 'font-awesome-rails'
 end
 gem 'jquery-rails'
-
+gem 'delayed_job_active_record' ,'4.0.1'
 gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
 gem "cucumber-rails", ">= 1.3.1", :group => :test, :require => false
