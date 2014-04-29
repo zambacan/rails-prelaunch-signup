@@ -72,7 +72,7 @@ class User < ActiveRecord::Base
       })
     Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
   end
-
+  handle_asynchronously :add_user_to_mailchimp
   def remove_user_from_mailchimp
     mailchimp = Gibbon::API.new
     result = mailchimp.lists.unsubscribe({
