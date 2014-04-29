@@ -17,7 +17,7 @@ RailsPrelaunchSignup::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   # change to true to allow email to be sent during development
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"  
 
@@ -25,8 +25,18 @@ RailsPrelaunchSignup::Application.configure do
       :address   => "smtp.mandrillapp.com",
       :port      => 25,
       :user_name => ENV["MANDRILL_USERNAME"],
-      :password  => ENV["MANDRILL_API_KEY"]
+      :password  => ENV["MANDRILL_API_KEY"],
+      :domain => 'swashfly.com'
     }
+    # config.action_mailer.smtp_settings = {
+    #    :address   => "smtp.mandrillapp.com",
+    #   :port      => 587,
+    #   :user_name => "raifestokes@gmail.com",
+    #   :password  => "FXjsm5xKdPx7fIcrl_fSRg"
+    #   :enable_starttls_auto => true, # detects and uses STARTTLS
+    #   :authentication => 'plain', # Mandrill supports 'plain' or 'login'
+    #   :domain => 'swashfly.com', # your domain to identify your server when connecting
+    #   }
 
 
 

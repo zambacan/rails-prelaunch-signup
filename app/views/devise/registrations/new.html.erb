@@ -1,53 +1,16 @@
-<!-- Button trigger modal -->
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button " class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">We will keep you informed. Thanks for your interest. </h4>
-      </div>
-      <div class="modal-body">
-	      <div class="col-md-6">
-	        <input type="email" placeholder="your@e-mail.com" name="EMAIL" class="subscribe">
-	      </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="submit" class="btn btn-warning pull-right btn-block">Join newsletter!</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.mod
-	
-  <!-- Newsletter -->
-  <div id="call-to-action" class="newsletter color-1">
-    <div class="inner-page row">
-		<h3 class="page-headline">We are creating an awesome tool for you.
-		
-   
-	        <div class="col-md-4">
-        
-	  		
-	        </div>
-      <div class="col-md-4">
-        
-		<a data-toggle="modal" href="#request-invite" class="btn btn-warning btn-lg">Stay Updated!</a>
-      </div>
-    </div>
-  </div> <!-- /#newsletter -->
 
 
+  
   <div id="request-invite" class="modal fade" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
     <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
     <div class="modal-dialog">
       <div class="modal-content">
       <div class="modal-header">
         <a class="close" data-dismiss="modal">&#215;</a>
-        <h3>We are</h3>
+        <h3>Request Invitation</h3>
       </div>
       <div class="modal-body">
         <%= f.error_notification %>
@@ -57,7 +20,10 @@
         <%= f.submit "Request Invitation", :class => "btn btn-primary", :id => 'invitation_button' %>
         <a class="btn" data-dismiss="modal" href="#">Close</a>
       </div>
-  </div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
     <% end %>
   </div>
+ 
+
+  

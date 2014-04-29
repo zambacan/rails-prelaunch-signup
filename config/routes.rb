@@ -11,4 +11,7 @@ RailsPrelaunchSignup::Application.routes.draw do
   resources :users do
     get 'invite', :on => :member
   end
+  
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 end

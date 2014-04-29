@@ -29,8 +29,8 @@
     
           <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
           <li><a title="Get in touch!" href="#contact" class="scroll brand-2">Contact</a></li>
-		  <li><a data-toggle="modal" href="#request-invite" class="scroll brand-2 raife">Plans</a></li>
-		   <li><a title="Newsletter!" href="#opt-in" class="scroll brand-2">Subscribe</a></li>
+		  <li><a data-toggle="modal" href="#request-invite" class="scroll brand-2 raife">Pricing</a></li>
+		
 		   
       
         </ul>
@@ -45,16 +45,18 @@
     </div>
     <div class="row inner-page">
       <div class="col-md-8 col-md-push-4 lazy-container">
+		  <h2>Track everything on the fly!</h2>
         <img class="lazy" alt="Looks great on every device" src="../assets/pixel.png" data-original="../assets/laptop.png" />
       </div>
       <div class="col-md-4 col-md-pull-8">
         <ul class="big-list">
-	        <li><i class="icon-user"></i>Client details</li>
-	        <li><i class="icon-calendar"></i>Consultations</li>
-	        <li><i class="icon-dollar"></i>Payment history</li>
 	        <li><i class="icon-tablet"></i>Access anywhere</li>
 	        <li><i class="icon-cloud"></i>No installation</li>
-	        <li><i class="icon-lock"></i>Secure</li>
+<li><i class="icon-lock"></i>Secure</li>
+			<li><i class="icon-user"></i>Client details</li>
+	        <li><i class="icon-calendar"></i>Consultations</li>
+	        <li><i class="icon-dollar"></i>Payment history</li>
+	        
         </ul>
         <br />
         <a href="#features" title="Check out more freatures!" class="scroll btn btn-primary btn-centered"><i class="icon-caret-down"></i> Learn more</a>
@@ -67,7 +69,7 @@
     <div class="row inner-page">
       <div class="col-md-12">
         <h2 class="pull-left">Maximize your billable client time & cut administration overhead.</h2>
-        <a href="#call-to-action" class="scroll btn btn-warning pull-right" title="Check out more freatures!"><i class="icon-caret-down"></i>Tell me more</a>
+       
       </div>
     </div>
   </div> <!-- /.sign-up -->
@@ -124,7 +126,7 @@
         <p>Swashfly is a software company based in Melbourne, Australia. We specialise in delivering hosted practice management solutions. The software is hosted and managed on physical infrastructure in Amazon's secure data centers. </p>
       </div>
     </div>
-
+	<h1></h1>
 
   </div> <!-- /#about -->
 
@@ -134,27 +136,10 @@
     <%= yield %>
   </div>
     <!-- before here -->
-  <!-- Contact page -->
-  <div id="contact" class="page color-3">
-    <div class="inner-page">
-      <h2 class="page-headline">We would love to hear from you...</h2>
-    </div>
-    <div class="row inner-page contact">
-      <div class="col-md-6">
-        <h3>Any questions or feedback?</h3>
-        <form id="contact-form">
-          <textarea rows="6" class="form-control" placeholder="Your comments or questions"></textarea>
-          <input type="text" class="form-control" placeholder="your@e-mail.com">
-          <input type="text" class="form-control" placeholder="Name">
-          <button class="btn btn-primary btn-centered">Contact us</button>
-        </form>
-      </div>
-    
-    </div>
-  </div> <!-- /#contact -->
 
   <!-- The footer, social media icons, and copyright -->
   <footer class="page color-5">
+	  <%= debug(params) if Rails.env.development? %>
     <div class="inner-page row">
       <div class="col-md-6 social">
         <a href="#contact"><i class="icon-twitter"></i></a>
@@ -163,7 +148,7 @@
         <a href="#contact"><i class="icon-google-plus-sign"></i></a>
       </div>
       <div class="col-md-6 text-right copyright">
-        &copy; 2013 <a href="http://swashfly.com" title="twitter bootstrap themes">swashfly.com</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="icon-caret-up"></i></a>
+        &copy; 2014 <a href="http://swashfly.com" title="twitter bootstrap themes">swashfly.com</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="icon-caret-up"></i></a>
       </div>
     </div>
   </footer>
