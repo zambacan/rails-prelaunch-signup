@@ -14,6 +14,7 @@
   vertical-align:top;
 }
 
+
 /* -------------------------------------------------- */
 /* Pages */
 /* -------------------------------------------------- */
@@ -27,7 +28,14 @@
 .call-to-action {
    
     color: #f5aa33;
+    }
+ .call-to-action span{
+    letter-spacing: -3px;
+    word-spacing: -8px;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
 }
+
 
 .color-1 {
   background: #4baad3;
@@ -112,7 +120,13 @@ footer a {
   margin-top: 0;
   padding: 80px 0;
 }
+// Main logo
+.img-responsive{ 
+  max-width: 20%; 
+  height: auto;
+}
 /* About page */
+
 .team img {
   margin-right: 30px;
 }
