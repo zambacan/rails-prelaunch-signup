@@ -1,26 +1,23 @@
-<%= link_to "Rails Prelaunch Signup", root_path, :class => 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Login', new_user_session_path %>
-    </li>
-  <% end %>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to 'Edit account', edit_user_registration_path %>
-    </li>
-    <% if current_user.has_role? :admin %>
-      <li>
-      <%= link_to 'Admin', users_path %>
-      </li>
-    <% end %>
-  <% else %>
-    <li>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    </li>
-  <% end %>
-</ul>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-reorder"></i>
+      </button>
+      <img class="img-responsive" src="../assets/white.png" alt="I Saw Who">
+    </div>
+    <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
+        <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Features</a></li>
+ <!-- <li><a data-toggle="modal" href="#request-invite" class="scroll brand-2 raife">Plans</a></li> -->
+        <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
+
+
+
+
+      </ul>
+    </div>
+  </div><!-- /.navbar-container -->
+</nav>

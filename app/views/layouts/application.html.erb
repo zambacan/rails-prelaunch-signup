@@ -16,165 +16,21 @@
 <!-- activate scrollspy -->
 
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="50">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="navbar-container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <i class="fa fa-reorder"></i>
-        </button>
-        <img class="img-responsive" src="../assets/white.png" alt="I Saw Who">
-      </div>
-      <div id="nav-collapse" class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a title="Home page" class="scroll brand-1" href="#home">Home</a></li>
-          <li><a title="Check out our awesome services" href="#features" class=" scroll brand-4">Features</a></li>
-    
-          <li><a title="Who we are" href="#about" class="scroll fadeto brand-4"> About us</a></li>
-     
-		
-		   
-      
-        </ul>
-      </div>
-    </div><!-- /.navbar-container -->
-  </nav>
-
+<%= render 'layouts/navigation' %>
   <!-- Home Page -->
-  <div id="home" class="page color-1">
-     <h2 class="page-headline color-3 call-to-action large">  <span>I Saw Who</span> is coming soon... </h2>
-       
-    <div class="inner-page">
-        <!-- Newsletter -->
-  <div class="newsletter color-1">
-    <div class="inner-page row">
-       
-      <div class="col-md-4 ">
-        <h4> Get notified when we launch!</h4>
-        <h5>Enter your email address to receive a 25% lifetime discount at launch.</h5>
-
-      </div>
-      <div class="col-md-6">
-        <input type="email" placeholder="your@e-mail.com" name="EMAIL" class="subscribe">
-      </div>
-      <div class="col-md-2">
-        <button type="submit" class="btn btn-warning pull-right btn-block">Nofity me!</button>
-      </div>
+<div id="home" class="page color-1">
+  <h2 class="page-headline color-3 call-to-action large">  <span>I Saw Who</span> is coming soon... </h2>
+  <div class="inner-page">
+    <div class="span12">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
     </div>
-  </div> <!-- /newsletter -->
-
-  
-      <h2 class="page-headline large">Simple Practice Management for Physiotherapists.</h2>
-    </div>
-    <div class="row inner-page">
-      <div class="col-md-8 col-md-push-4 lazy-container">
-		  <h2>Track everything on the fly!</h2>
-        <img class="lazy" alt="Looks great on every device" src="../assets/pixel.png" data-original="../assets/laptop.png" />
-      </div>
-      <div class="col-md-4 col-md-pull-8">
-        <ul class="big-list">
-	        <li><i class="fa fa-tablet"></i>Mobile access</li>
-      		<li><i class="fa fa-user"></i>Client details</li>
-  	       <li><i class="fa fa-calendar"></i>Consultations</li>
-  	      <li><i class="fa fa-dollar"></i>Payment history</li>
-          <li><i class="fa fa-lock"></i>Secure</li>	        
-          <li><i class="fa fa-cloud"></i>No installation</li>
-        </ul>
-        <br />
-        <a href="#features" title="Check out more freatures!" class="scroll btn btn-primary btn-centered"><i class="fa fa-caret-down"></i> Learn more</a>
-      </div>
-    </div>
-  </div> <!-- /#home -->
-
-  <!-- Sign up -->
-  <div class="sign-up color-2 visible-lg">
-    <div class="row inner-page">
-      <div class="col-md-12">
-        <h2 class="pull-left">More billable client time + Less administration = Better Business</h2>
-       
-      </div>
-    </div>
-  </div> <!-- /.sign-up -->
-
-  <!-- Feature page-->
-  <div id="features" class="page color-4">
-    <div class="inner-page">
-        <h2 class="page-headline">Why should you choose <strong>ISawWho</strong></h2>
-    </div>
-
-    <div class="inner-page row">
-        <ul class="features list-inline">
-  	      <li>
-        
-  	        <h3><i class="fa fa-smile-o"></i> Smart business</h3>
-  	        <p><strong>ISawWho</strong> is web based "software as a service".  This means you have no upfront capital costs, nothing to install, no servers to maintain and no IT skills required. </p><br><p>For a small monthly fee (likely to be fully tax deductable) <strong>ISawWho</strong> feels like having an assistant. It will pay for itself over and over again. We offer a 30 day free trial and there is no contract. <strong>It's completely risk free!</strong> 
-			</p>
-  	      </li>
-          <li>
-              <h3><i class="fa fa-clock-o"></i> More client time</h3> 
-              <p> <strong>ISawWho</strong> is a "lean mean" business tool that streamlines key administration tasks so you can focus on looking after your clients. <strong>ISawWho</strong> enables you to easily lookup and record key information on the fly from any web enabled device.</p><br><p>
-  				Our continued success is entirely dependent on your continued success. So we are 
-  				 constantly taking feedback from our customers to improve <strong>ISawWho</strong>.</p>
-            </li>
-        <li>
-        <h3><i class="fa fa-lock"></i> Secure data </h3>
-        <p>Most of us dont worry about data security until its too late. Very few people diligiently backup their data every day or  even every week. </p><br><p>With <strong>ISawWho</strong> your data is backed up daily. No one but you or your authorized staff can access your data. We never see or keep your credit card details, these are encrypted and stored by a PCI compliant Payment Gateway.        </p>
-      </li>
-	
-          </ul>
-    </div>
-
-
-
-
-
-  </div> <!-- /#features -->
-  
-  <!-- Assets page -->
-
- 
-  <!-- About page -->
-  <div id="about" class="page color-4">
-    <div class="inner-page">
-   
-    </div>
-    <div class="row inner-page">
-      <div class="col-md-6  lazy-container">
-        <img class="figurette lazy" src="../assets/pixel.png" data-original="../assets/green-office.png" alt="Our workspace" />
-      </div>
-      <div class="col-md-6">
-        <h3>Who is behind ISawWho?</h3>
-     <p class="lead">Hardware by Amazon, software by Swashfly.</p>
-        <p>Swashfly is a software company based in Melbourne, Australia. We specialise in delivering hosted practice management solutions. The software is hosted and managed on physical infrastructure in Amazon's secure data centers. </p>
-      </div>
-    </div>
-	<h1></h1>
-
-  </div> <!-- /#about -->
-
-  <!-- put modal here -->
-  <div class="span12">
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+    <%= render 'layouts/value_propositions' %>
+    <%= render 'layouts/features' %>
+    <%= render 'layouts/about_us' %>
+    <%= render 'layouts/footer' %>
   </div>
-    <!-- before here -->
-
-  <!-- The footer, social media icons, and copyright -->
-  <footer class="page color-5">
-	  <%= debug(params) if Rails.env.development? %>
-    <div class="inner-page row">
-      <div class="col-md-6 social">
-      
-        <a href="#contact"><i class="fa fa-linkedin"></i></a> 
-        <a href="#contact"><i class="fa fa-twitter"></i></a>
-        <a href="#contact"><i class="fa fa-facebook"></i></a>
-    
-      </div>
-      <div class="col-md-6 text-right copyright">
-        &copy; 2014 <a href="http://swashfly.com" title="twitter bootstrap themes">swashfly.com</a> | all rights reserved | <a href="#top" title="Got to top" class="scroll">To top <i class="fa fa-caret-up"></i></a>
-      </div>
-    </div>
-  </footer>
+</div>
 
 </body>
 </html>

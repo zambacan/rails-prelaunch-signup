@@ -1,29 +1,18 @@
-
-
-<!-- Modal -->
-
-
-  
-  <div id="request-invite" class="modal fade" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
-    <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
-    <div class="modal-dialog">
-      <div class="modal-content">
-      <div class="modal-header">
-        <a class="close" data-dismiss="modal">&#215;</a>
-        <h3>Request Invitation</h3>
+<%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
+  <div class="newsletter color-1">
+    <div class="inner-page row">
+      <div class="col-md-4 ">
+        <h4> Get notified when we launch!</h4>
+        <h5>Enter your email address to receive a 25% lifetime discount at launch.</h5>
       </div>
-      <div class="modal-body">
+      <div class="col-md-6">
         <%= f.error_notification %>
-        <%= f.input :email, :placeholder => 'user@example.com' %>
+        <%= f.input :email, :class=> 'subscribe', :placeholder => 'your@email.com' %>
       </div>
-      <div class="modal-footer">
-        <%= f.submit "Request Invitation", :class => "btn btn-primary", :id => 'invitation_button' %>
-        <a class="btn" data-dismiss="modal" href="#">Close</a>
+      <div class="col-md-2">
+        <%= f.submit "Nofity Me!", :class => "btn btn-warning pull-right btn-block", :id => 'invitation_button' %>
       </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-    <% end %>
-  </div>
- 
-
+    </div>
+  </div> 
   
+<% end %>

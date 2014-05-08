@@ -20,7 +20,9 @@
 /* -------------------------------------------------- */
 /* Colors. Just add appropriate class
  to your new page.*/
-
+label.email.optional {
+  display: none;
+}
 .btn-warning {
     background: #f5aa33;
     color: #ffffff;
@@ -1085,6 +1087,7 @@ img.mfp-img {
 .mfp-fade.mfp-bg.mfp-removing {
   opacity: 0;
 }
+
 /* content at start */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
