@@ -7,12 +7,13 @@
       </div>
       <div class="col-md-6">
         <%= f.error_notification %>
-        <%= f.input :email, :class=> 'subscribe', :placeholder => 'your@email.com' %>
+        <%= f.input :email, :class=> 'subscribe', :placeholder => 'your@email.com', validate: :true %>
       </div>
       <div class="col-md-2">
-        <%= f.submit "Nofity Me!", :class => "btn btn-warning pull-right btn-block", :id => 'invitation_button' %>
+        <%= f.submit "Nofity Me!", :class => "btn btn-warning pull-right btn-block"  %>
       </div>
     </div>
   </div> 
   
 <% end %>
+<!-- this is the end of the form -->
