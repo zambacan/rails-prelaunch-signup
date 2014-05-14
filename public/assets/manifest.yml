@@ -37,6 +37,8 @@ video.png: video.png
 video/index.png: video.png
 video@2x.png: video@2x.png
 video@2x/index.png: video@2x.png
+white.png: white.png
+white/index.png: white.png
 application.js: application.js
 application/index.js: application.js
 application.css: application.css
