@@ -1,8 +1,19 @@
+  <%content_for :banner do %>
+  <h2 class="page-headline color-3 call-to-action large">  
+      <span>I Saw Who</span>
+      is coming soon... 
+    </h2>
+<% end %>
+
 <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
   <div class="newsletter color-1">
     <div class="inner-page row">
       <div class="col-md-4 ">
         <h4> Get notified when we launch!</h4>
+        <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <h1><%= @hello%></h1>
         <h5>Enter your email address to receive a 25% lifetime discount at launch.</h5>
       </div>
       <div class="col-md-6">

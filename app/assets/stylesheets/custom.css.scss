@@ -20,7 +20,7 @@
 /* -------------------------------------------------- */
 /* Colors. Just add appropriate class
  to your new page.*/
-label.email.optional {
+label.email {
   display: none;
 }
 .btn-warning {
@@ -31,7 +31,10 @@ label.email.optional {
    
     color: #f5aa33;
     }
- .call-to-action span{
+    .thanks { 
+      color: black;}
+
+ #banner span{
     letter-spacing: -3px;
     word-spacing: -8px;
     font-family: 'Muli', sans-serif;

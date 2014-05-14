@@ -1,26 +1,23 @@
 class RegistrationsController < Devise::RegistrationsController
 
-def new
-  # dont understand why the following is not working
-  
-@hello = "Welcome to JRuby on Rails on the Sun GlassFish Enterprise Server"
-super
-end
+
   # override #create to respond to AJAX with a partial
   def create
     build_resource sign_up_params
 # nor do i understand why the following is not working
     if resource.save
-      flash = { success: "It worked!", error: "It failed." }
+    
        if resource.active_for_authentication?
         sign_in(resource_name, resource)
         (render(:partial => 'thankyou', :layout => false) && return)  if request.xhr?
         respond_with resource, :location => after_sign_up_path_for(resource)
       else
         expire_data_after_sign_in!
-        (render(:partial => 'thankyou', :layout => false) && return)  if request.xhr?
-        
-        respond_with resource, :location => after_inactive_sign_up_path_for(resource)
+        @hello = "Welcome to JRuby on Rails on the Swashfly"
+        render  '_thankyou', :layout => true
+        # , :layout => true
+        # (render(:partial => 'thankyou', :layout => false) && return)  if request.xhr?
+        # respond_with resource, :location => after_inactive_sign_up_path_for(resource)
       end
     else
       clean_up_passwords resource
